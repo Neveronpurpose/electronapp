@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchiridion</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- SCRIPTS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+
+
+
+  <body>
+    <!-- MAIN NAVBAR -->
+        <nav class="hover-underline-menu" data-menu-underline-from-center>
+            <ul class="menu align-center">
+                <li><a href="#" data-open="offCanvasRight">Rulebook</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">Create</a></li>
+            </ul>
+        </nav>
+
+    <!-- OFFCANVAS MENU -->
+        <div class="multilevel-offcanvas off-canvas position-left" id="offCanvasRight" data-off-canvas>
+            <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+                <li>
+                    <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+                </li>
+                <br>
+                <li>
+                    <a href="#">CHAPTER 9: Combat</a>
+                    <ul class="menu vertical sublevel-1">
+                        <li>
+                            <a href="#">The Combat Sequence</a>
+                            <ul class="menu vertical sublevel-2">
+                                <li><a class="subitem" href="#">Initiative</a></li>
+                                <li><a class="subitem" href="#">Surprise Round</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Action Types</a>
+                            <ul class="menu vertical sublevel-2">
+                                <li>
+                                    <a href="#">On your Turn</a>
+                                    <ul class="menu vertical sublevel-3">
+                                        <li><a class="subitem" href="#">Rules for Actions</a></li>
+                                        <li><a class="subitem" href="#">Generic Actions (Listed)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="subitem" href="#">Reactions</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="subitem" href="#">Thing 1</a></li>
+                        <li><a class="subitem" href="#">Thing 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- BODY -->
+            <div class="body-info">
+                <br>
+                <small>VIEWPORT</small>
+            </div>
+        </div>
+
+    <!-- BOILERPLATE SCRIPTS: DO NOT DELETE -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- CUSTOM SCRIPT -->
+    <script type="text/javascript">
+    <!--
+        // Main Navbar
+        $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+    -->
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+{
+    "character name": "",
+    "alignment": "",
+    "age": 0,
+    "gender": "",
+    "deity": "",
+
+    "race": "",
+    "class": "",
+    "background": "",
+
+    "size": "",
+    "speed": 0,
+    "level": 0,
+    "xp": 0,
+
+    "languages": ["Common"],
+    "hp": {
+        "current": 0,
+        "maximum": 0,
+        "temporary": 0
+    },
+    "resonance": {
+        "current": 0,
+        "maximum": 0,
+        "temporary": 0
+    },
+
+    "fortitude": {
+        "value": 0,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+    "reflex": {
+        "value": 0,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+    "will": {
+        "value": 0,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+
+    "armor class": {
+        "value": 0,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+    "touch armor class": {
+        "value": 0,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+
+    "attributes": {
+        "strength": {
+            "score": 0,
+            "modifier": 0
+        }
+    },
+
+    "weapon proficiencies": {
+        "simple melee": false,
+        "martial melee": false,
+        "simple ranged": false,
+        "martial ranged": false,
+        "exotic": {}
+    },
+    "armor proficiencies": {
+        "light": false,
+        "medium": false,
+        "heavy": false,
+        "shields": false
+    },
+
+    "perception": {
+        "trained": false,
+        "abil mod": 0,
+        "prof mod": 0,
+        "item mod": 0,
+        "cond mod": 0,
+        "circ mod": 0,
+        "untyped mod": 0
+    },
+
+    "skills": {
+        "acrobatics": {
+            "trained": false,
+            "abil mod": 0,
+            "prof mod": 0,
+            "item mod": 0,
+            "cond mod": 0,
+            "circ mod": 0,
+            "untyped mod": 0
+        }
+    },
+
+    "actions": {
+        "action_name": {
+            "from": "",
+            "action_cost": 0,
+            "description": ""
+        }
+    },
+    "reactions": {
+        "from": "",
+        "reaction_cost": 1,
+        "description": ""
+    },
+
+    "feats": {},
+    "inventory": {
+        "item_name": {
+            "quantity": 0,
+            "value": 0,
+            "weight": 0,
+            "description": "",
+            "properties": []
+        }
+    },
+
+    "melee attacks": {
+        "attack_name":{
+            "trained": false,
+            "abil mod": 0,
+            "prof mod": 0,
+            "item mod": 0,
+            "cond mod": 0,
+            "circ mod": 0,
+            "untyped mod": 0,
+            "effects": {
+                "damage": ""
+            }
+        }
+    },
+    "ranged attacks": {
+        "attack_name":{
+            "trained": false,
+            "abil mod": 0,
+            "prof mod": 0,
+            "item mod": 0,
+            "cond mod": 0,
+            "circ mod": 0,
+            "untyped mod": 0,
+            "effects": {
+                "damage": ""
+            }
+        }
+    },
+
+    "spell bonus": 0,
+    "spell dc": 0,
+    "spell slots": {},
+    "spells known": {},
+    "spell points": {},
+    "powers known": {},
+
+    "journal": {}
+}

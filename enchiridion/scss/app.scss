@@ -1,0 +1,343 @@
+/*****************************************************************************/
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+
+// Motion UI
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/*****************************************************************************/
+
+// MULTI-LEVEL OFFCANVAS MENU
+$nav-text-color: $white;
+$nav-height: 75px;
+$nav-background: #2c3840;
+$offcanvas-padding: 20px;
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $nav-background;
+  height: $nav-height;
+  margin-bottom: 75px;
+
+  .nav-bar-logo {
+    padding: 1.8rem;
+  }
+
+  li {
+     background: $nav-background;
+  }
+
+  a {
+    color: $nav-text-color;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: lighten($nav-background, 50%);
+    }
+  }
+
+  @media screen and (max-width: 39.9375em) {
+    height: $nav-height/1.4;
+  }
+
+  .offcanvas-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    color: $nav-text-color;
+    text-transform: uppercase;
+    background-color: lighten($nav-background, 20%);
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+
+    .offcanvas-trigger-text {
+      margin-right: 0.25rem;
+      margin-top: 0.25rem;
+    }
+
+    &:hover {
+      background-color: lighten($nav-background, 30%);
+    }
+
+    @media screen and (max-width: 39.9375em) {
+      padding: 0.9rem;
+    }
+  }
+}
+
+.multilevel-offcanvas {
+  background: darken($nav-background, 5%);
+  padding: 20px;
+  color: $white;
+
+  > .menu {
+    margin-bottom: 1rem;
+  }
+
+  .menu a {
+    color: rgba($nav-text-color,.6);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $nav-text-color;
+    }
+  }
+
+  .fa {
+    color: $nav-text-color;
+  }
+
+  .is-accordion-submenu-parent > a::after {
+    border-color: rgba($nav-text-color,.6) transparent transparent;
+  }
+
+  .social-links {
+    margin-left: $offcanvas-padding;
+
+    li {
+      margin-right: 5px;
+    }
+
+    a:hover .fa {
+      color: darken($nav-text-color,25%);
+      transition: color .2s ease-in;
+    }
+
+    .fa {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.body-info {
+  text-align: center;
+  color: $nav-background;
+
+  .button {
+    margin: 1rem 0;
+    padding: 0.85em 2em;
+  }
+}
+
+.is-open + .off-canvas-content .hamburger {
+  .line:nth-child(1),
+  .line:nth-child(3) {
+    width: 12px;
+  }
+
+  .line:nth-child(1) {
+    transform: translateX(-5px) rotate(-45deg);
+  }
+
+  .line:nth-child(3) {
+    transform: translateX(-5px) rotate(45deg);
+  }
+}
+
+.hamburger .line {
+  width: 20px;
+  height: 2px;
+  background-color: $nav-text-color;
+  display: block;
+  margin: 3px auto;
+  transition: all 0.3s ease-in-out;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+// HOVER UNDERLINE MENU
+$menu-underline-from-center-bg: #2C3840;
+$menu-underline-from-center-border-thickness: 0.125rem;
+
+.hover-underline-menu {
+  width: 100%;
+
+  .menu {
+    background-color: $menu-underline-from-center-bg;
+
+    a {
+      color: $white;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .underline-from-center {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% - #{$menu-underline-from-center-border-thickness});
+        border-bottom: $menu-underline-from-center-border-thickness solid $white;
+        left: 50%;
+        right: 50%;
+        transition: all 0.5s ease;
+      }
+
+      &:hover::after {
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+
+
+
+// MULTI-LEVEL ACCORDION FILE MENU
+// variables
+$multilevel-accordion-bg: #4d5158;
+$multilevel-accordion-sub-bg: #35383d;
+$multilevel-accordion-separator: #41444a;
+
+.multilevel-accordion-menu {
+  // background for main accordion items
+  .is-accordion-submenu-parent a {
+    background: $multilevel-accordion-bg;
+  }
+
+  // background for sub accordion items
+  .is-accordion-submenu a {
+    background: $multilevel-accordion-sub-bg;
+  }
+
+  // creates classes for nested elements, sub-item-*
+  @for $i from 1 through 6 {
+    .sublevel-#{$i} {
+      text-indent: 0rem + $i/1.5;
+    }
+  }
+
+  a {
+    color: $white;
+    // sets accodion item separator color
+    box-shadow: inset 0 -1px $multilevel-accordion-separator;
+
+    &::after {
+      // sets accodion arrow color and direction
+      border-color: $white transparent transparent;
+    }
+  }
+
+  // padding for each list item
+  .menu > li:not(.menu-text) > a {
+    padding: 1.2rem 1rem;
+  }
+}
+
+// style for folder icon on subitem anchors without a submenu
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a.subitem::before {
+  content: "\f016";
+  font-family: FontAwesome;
+  margin-right: 1rem;
+}
+
+// changes folder icon to open then accordion is open
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] a {
+  &::before {
+    content: "\f07c";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+  }
+}
+
+// changes folder icon to closed then accordion is closed
+.multilevel-accordion-menu .is-accordion-submenu-parent[aria-expanded="false"] a {
+  &::before {
+    content: "\f07b";
+    font-family: FontAwesome;
+    margin-right: 1rem;
+  }
+}
+
+
+
+// ANIMATED EXPANDING SEARCH FORM
+$animated-search-form-initial-width: 100%; // 10rem;
+$animated-search-form-transition-duration: 0.4s;
+
+.animated-search-form[type=search] {
+  // width: $animated-search-form-initial-width;
+  border: 0.125rem solid $light-gray;
+  box-shadow: 0 0 3.125rem rgba(0,0,0, 0.18);
+  border-radius: $global-radius;
+  // background-image: url('//image.ibb.co/i7NbrQ/search_icon_15.png');
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  /*
+  transition: width $animated-search-form-transition-duration ease-in-out;
+
+  &:focus {
+    width: 100%;
+  }
+  */
+}
